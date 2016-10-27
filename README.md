@@ -1,6 +1,7 @@
-[![Docker Stars](https://img.shields.io/docker/stars/mrjin/shadowsocks.svg)](https://hub.docker.com/r/mrjin/shadowsocks/)                [![Docker Pulls](https://img.shields.io/docker/pulls/mrjin/shadowsocks.svg)](https://hub.docker.com/r/mrjin/shadowsocks/)
+[![Docker Stars](https://img.shields.io/docker/stars/mrjin/shadowsocks.svg?style=flat-square)](https://hub.docker.com/r/mrjin/shadowsocks/)    [![Docker Pulls](https://img.shields.io/docker/pulls/mrjin/shadowsocks.svg?style=flat-square)](https://hub.docker.com/r/mrjin/shadowsocks/)    [![license](https://img.shields.io/github/license/jinfeijie/Docker.svg?style=flat-square)](https://github.com/jinfeijie/Docker)    [![Docker Automated buil](https://img.shields.io/docker/automated/mrjin/shadowsocks.svg?style=flat-square)](https://hub.docker.com/r/mrjin/shadowsocks/)    [![Libraries.io for GitHub](https://img.shields.io/librariesio/github/jinfeijie/Docker.svg?style=flat-square)](https://github.com/jinfeijie/Docker)
 
-# Docker 飞机与OPENSSH开机启动
+ [![GitHub forks](https://img.shields.io/github/forks/jinfeijie/Docker.svg?style=social&label=Fork&style=plastic)](https://github.com/jinfeijie/Docker)    [![GitHub stars](https://img.shields.io/github/stars/jinfeijie/Docker.svg?style=social&label=Star&style=plastic)](https://github.com/jinfeijie/Docker)    [![Github Releases (by Release)](https://img.shields.io/github/downloads/jinfeijie/Docker/1.0.1/total.svg?style=plastic)](https://github.com/jinfeijie/Docker/releases)
+### Docker 飞机与OPENSSH开机启动
 
 设置了3个环境变量 `SSH_PASSWORD` `SS_PASSWORD` `PORT`
 
@@ -8,18 +9,7 @@
 * `SS_PASSWORD`  SS飞机密码  默认`jin123`
 * `PORT`  SS飞机端口  默认`8888`
 
-ROOT用户下，主机下创建Docker容器命令
-# 快速打开姿势
-```
-docker run --name "MrJin-shadowsocks" mrjin/shadowsocks
-```
-
-# 自定义打开姿势
-```
-docker run --name "MrJin-shadowsocks" -p 8000:8000 -p 22:22 -e SSH_PASSWORD=jin123 -e SS_PASORD=jin123 -e PORT=8000 mrjin/shadowsocks
-```
-
-# 云平台（例如：[daocloud云](https://www.daocloud.io/)、[arukas](https://app.arukas.io)的代码构建平台均会直接用默认参数构建）
+### 云平台（例如：[daocloud云](https://www.daocloud.io/)、[arukas](https://app.arukas.io)的代码构建平台均会直接用默认参数构建）
 云平台下的构建无法修改参数，fork后修改如下参数
 ```
 ENV SSH_PASSWORD    jin123
