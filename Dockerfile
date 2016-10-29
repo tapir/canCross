@@ -28,14 +28,11 @@ RUN set -x && \
   apt-get clean
 
 # 开机启动项配置
+ADD CMD /usr/local/bin/CMD
 RUN set -x && \   
-  wget https://github.com/jinfeijie/Docker/archive/$version.tar.gz && \
-  tar -zxvf $version.tar.gz && \
-  mv /Docker-*/CMD /usr/local/bin/CMD && \
   chmod 777 /usr/local/bin/CMD && \
   echo "sudo /usr/local/bin/ssserver -k $SS_PASSWORD -p $PORT -m aes-256-cfb --user nobody -d start">>/usr/local/bin/CMD && \
-  echo "/usr/sbin/sshd -D">>/usr/local/bin/CMD && \
-  rm -rf /$version.tar.gz /Docker-*
+  echo "/usr/sbin/sshd -D">>/usr/local/bin/CMD
   
 EXPOSE 22
 EXPOSE $PORT
