@@ -37,6 +37,7 @@ RUN set -ex && \
                                 xmlto && \
     cd /tmp && \
     curl -sSL $SS_URL | tar xz --strip 1 && \
+    sh autogen.sh && \
     ./configure --prefix=/usr --disable-documentation && \
     make install && \
     cd .. && \
